@@ -1,0 +1,36 @@
+html, body {
+  height: 100%;
+  margin: 0;
+} 
+
+body{
+  background: linear-gradient(to bottom, #761919, #de2a2a);
+}
+
+.header-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#headerLogo{
+  margin: -30px;
+  max-width: 250px;
+  height: auto;
+  display: block;
+}
+
+#header-text{
+  font-family: "Lilita one";
+  color: white;
+  margin-top: -20px;
+  font-size: clamp(4vh, 5vw, 7.5vh);
+}
+
+#header-text2{
+  font-family: "Lilita one";
+  color: white;
+  margin-top: -30px;
+  font-size: clamp(1.5vh, 2vw, 3vh);
+}
