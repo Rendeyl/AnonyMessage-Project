@@ -27,13 +27,13 @@ body{
   color: white;
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: clamp(4vh, 5vw, 7.5vh);
+  font-size: 7vh;
 }
 
 #header-text2{
   font-family: "Lilita one";
   color: white;
-  font-size: clamp(1.5vh, 2vw, 3vh);
+  font-size: 3vh;
   margin-top: 0px;
 }
 
@@ -43,5 +43,11 @@ body{
 @media (max-width: 1500px) {
   #headerLogo {
     max-width: 100px;
+  }
+  #header-text{
+    font-size: 6vh;
+  }
+  #header-text2{
+    font-size: 2vh;
   }
 }
