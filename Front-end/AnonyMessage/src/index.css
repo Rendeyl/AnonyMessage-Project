@@ -25,7 +25,6 @@ body{
 #header-text{
   font-family: "Lilita one";
   color: white;
-  /*margin-top: -20px;*/
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: clamp(4vh, 5vw, 7.5vh);
@@ -34,7 +33,15 @@ body{
 #header-text2{
   font-family: "Lilita one";
   color: white;
-  /*margin-top: -30px;*/
   font-size: clamp(1.5vh, 2vw, 3vh);
   margin-top: 0px;
+}
+
+/* RESPONSIVENESS */
+
+/*Tablets/Ipads*/
+@media (max-width: 1500px) {
+  #headerLogo {
+    max-width: 100px;
+  }
 }
