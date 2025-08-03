@@ -5,7 +5,7 @@ function Header() {
         
         <header>
             <div className="header-cont">
-                <img id="headerLogo" src="/Logo.png" alt="Logo"/>
+                <img id="headerLogo" src="/icon.png" alt="Logo"/>
                 <h1 id="header-text">AnonyMessage</h1>
                 <h2 id="header-text2">Anonymous Message Sender!</h2>
             </div>

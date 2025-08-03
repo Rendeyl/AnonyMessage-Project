@@ -12,11 +12,12 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 0.3rem;
 }
 
 #headerLogo{
-  /*margin: -30px;*/
-  max-width: 250px;
+  margin-top: 5vh;
+  max-width: 150px;
   height: auto;
   display: block;
 }
@@ -25,6 +26,8 @@ body{
   font-family: "Lilita one";
   color: white;
   /*margin-top: -20px;*/
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: clamp(4vh, 5vw, 7.5vh);
 }
 
@@ -33,4 +36,5 @@ body{
   color: white;
   /*margin-top: -30px;*/
   font-size: clamp(1.5vh, 2vw, 3vh);
+  margin-top: 0px;
 }
