@@ -246,15 +246,19 @@ body{
   width: 20vh;
   font-size: 2vh;
 }
+#containerCard{
+  flex-direction: column;
+  align-items: center;
+}
+.TCard{
+margin: 3vh;
+max-width: 70vh;
+width: 30vh;
+}
+.WhiteCard{
+  max-height: 25vh;
+  height: 25vh;
+  font-size: 2vh;
+}
 
-
-  #containerCard{
-    flex-direction: column;
-    align-items: center;
-  }
-  .TCard{
-  margin: 3vh;
-  max-width: 70vh;
-  width: 30vh;
-  }
 }
