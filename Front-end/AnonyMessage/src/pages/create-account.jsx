@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Create_Account(){
 
@@ -11,7 +12,9 @@ function Create_Account(){
 
     return(
         <div id="container1">
+            <Link to={"/"}>
             <img id="headerLogo" src="/icon.png" alt="Logo"/>
+            </Link>
 
             <h1 id="createtxt">Create Account</h1>
 
@@ -24,12 +27,12 @@ function Create_Account(){
             <input id="confirm-password" className="CA-input"
              placeholder="Confirm Password" type={showPassword ? "text" : "password"}/>
             
-            <label>
-                <input type="checkbox" id="showpassCB"
+            <label id="passwordCB">
+                <input type="checkbox" id="checkboxPassword"
                  checked={showPassword}
                 onChange={CheckboxChange}/> Show Password
             </label>
-            
+
             <button id="CA-btn">Create Account</button>
         </div>
     );

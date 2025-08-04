@@ -94,7 +94,12 @@ body{
   font-family: "Lilita one";
 }
 
-#showpassCB{
+#passwordCB{
+  margin-top: 2vh;
+  font-family: "Lilita one";
+  color: white;
+  font-size: 2vh;
+  transform: translateX(-4vh);
 }
 
 #CA-btn{
