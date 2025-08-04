@@ -222,13 +222,39 @@ body{
   #text0{
   font-size: 2vh;
   }
+
+  #headerLogo2{
+  margin-top: 2vh;
+  max-width: 80px;
+  height: 50%;
+  display: block;
+}
+
+#userHeader{
+  padding: 0.5vh;
+  background-color: #ae3333;
+  display: flex;
+  flex-direction: row;
+}
+
+#displayUser{
+  font-size: 3vh;
+}
+
+#logoutBTN{
+  max-width: 110px;
+  width: 20vh;
+  font-size: 2vh;
+}
+
+
   #containerCard{
     flex-direction: column;
     align-items: center;
   }
   .TCard{
   margin: 3vh;
-  max-width: 40vw;
-  width: 30vw;
+  max-width: 70vh;
+  width: 30vh;
   }
 }
