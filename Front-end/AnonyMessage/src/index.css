@@ -37,9 +37,37 @@ body{
   margin-top: 0px;
 }
 
+#lower-part{
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#text0{
+  font-family: "Lilita one";
+  color: white;
+}
+
+#account-btn{
+  margin: 1vh;
+  padding: 3vh;
+  border: 1px solid #ff6363;
+  border-radius: 30px;
+  background-color: #ff6363;
+  font-family: "Lilita one";
+  font-size: 3vh;
+  color: white;
+}
+
+#account-btn:active{
+  background-color: #aa4646;
+  border-color: #aa4646;
+}
+
 /* RESPONSIVENESS */
 
-/*Tablets/Ipads*/
 @media (max-width: 1500px) {
   #headerLogo {
     max-width: 100px;
@@ -49,5 +77,12 @@ body{
   }
   #header-text2{
     font-size: 2vh;
+  }
+  #account-btn{
+    padding: 2vh;
+    font-size: 2vh;
+  }
+  #text0{
+  font-size: 2vh;
   }
 }
