@@ -172,7 +172,7 @@ body{
 #containerCard{
   display: flex;
   flex-direction: row;
-  
+  flex-wrap: wrap;
 }
 
 .TCard{

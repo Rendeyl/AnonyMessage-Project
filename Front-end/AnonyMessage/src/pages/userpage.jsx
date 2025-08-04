@@ -18,9 +18,6 @@ function UserPage({username}){
                 <TextCard timeNdate={tnd} message={message}/>
                 <TextCard timeNdate={tnd} message={message}/>
                 <TextCard timeNdate={tnd} message={message}/>
-                <TextCard timeNdate={tnd} message={message}/>
-                <TextCard timeNdate={tnd} message={message}/>
-                <TextCard timeNdate={tnd} message={message}/>
             </div>
 
         </div>
