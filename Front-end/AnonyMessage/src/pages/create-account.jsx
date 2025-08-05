@@ -33,9 +33,8 @@ function Create_Account(){
                 onChange={CheckboxChange}/> Show Password
             </label>
 
-            <Link to="/user">
             <button id="CA-btn">Create Account</button>
-            </Link>
+            
         </div>
     );
 
