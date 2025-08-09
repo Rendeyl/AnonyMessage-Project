@@ -17,7 +17,7 @@ function App() {
         <Route path="/User" element={<UserPage username={"Rhen Dale"}/>}/>
         <Route path="/Send" element={<Sender/>}/>
         <Route path="/Login" element={<Login/>}/>
-      </Routes>
+      </Routes> 
     </Router>
     
     </>

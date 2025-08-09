@@ -4,9 +4,50 @@ import { Link } from "react-router-dom";
 function Create_Account(){
 
     const [showPassword, setShowPassword] = useState(false);
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+
 
     function CheckboxChange() {
     setShowPassword(prev => !prev);
+  }
+
+    async function handleCreateAccount() {
+    if (!username || !password) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    try {
+      const res = await fetch(
+        "https://anony-message-backend.vercel.app/api/signup", // change to your actual backend route
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        }
+      );
+
+      const data = await res.json();
+      console.log("Signup response:", data);
+
+      if (res.ok) {
+        alert("Account created successfully!");
+      } else {
+        alert(data.message || "Error creating account.");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+      alert("Something went wrong.");
+    }
   }
 
 
@@ -19,13 +60,17 @@ function Create_Account(){
             <h1 id="createtxt">Create Account</h1>
 
             <input id="username-input" className="CA-input"
-             placeholder="Username" type="text"/>
+             placeholder="Username" type="text"
+             value={username} onChange={(e) => setUsername(e.target.value)}/>
 
             <input id="password-input" className="CA-input"
-             placeholder="Password" type={showPassword ? "text" : "password"}/>
+             placeholder="Password" type={showPassword ? "text" : "password"}
+             value={password} onChange={(e) => setPassword(e.target.value)}
+             />
 
             <input id="confirm-password" className="CA-input"
-             placeholder="Confirm Password" type={showPassword ? "text" : "password"}/>
+             placeholder="Confirm Password" type={showPassword ? "text" : "password"}
+             value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
             
             <label id="passwordCB">
                 <input type="checkbox" id="checkboxPassword"
@@ -33,7 +78,7 @@ function Create_Account(){
                 onChange={CheckboxChange}/> Show Password
             </label>
 
-            <button id="CA-btn">Create Account</button>
+            <button id="CA-btn" onClick={handleCreateAccount}>Create Account</button>
             
         </div>
     );
