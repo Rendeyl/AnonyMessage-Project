@@ -14,6 +14,23 @@ function Create_Account(){
   }
 
     async function handleCreateAccount() {
+
+    if(username.length > 2){
+      alert("Username too short");
+      return;
+    }else if(username.length < 16){
+      alert("Username too long");
+      return;
+    }
+
+    if(password.length > 4){
+      alert("Username too short");
+      return;
+    }else if(password.length < 18){
+      alert("Username too long");
+      return;
+    }
+
     if (!username || !password) {
       alert("Please fill in all fields.");
       return;   
@@ -41,7 +58,7 @@ function Create_Account(){
 
       if (res.ok) {
         alert("Account created successfully!");
-        //navigate("/");
+        navigate("/");
       } else {
         alert(data.message || "Error creating account.");
       }
