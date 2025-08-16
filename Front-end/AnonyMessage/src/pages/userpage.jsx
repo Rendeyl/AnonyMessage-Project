@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import TextCard from "../Components/card";
 
-function UserPage({username}){
+function UserPage(){
 
     const {username} = useParams();
 
