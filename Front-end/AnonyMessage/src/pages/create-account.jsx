@@ -15,29 +15,19 @@ function Create_Account(){
 
     async function handleCreateAccount() {
 
-    if(username.length < 3){
-      alert("Username too short");
-      return;
-    }
-    
-    if(username.length > 16){
-      alert("Username too long");
-      return;
-    }
-
-    if(password.length < 4){
-      alert("Password too short");
-      return;
-    }
-    
-    if(password.length < 18){
-      alert("Password too long");
-      return;
-    }
-
     if (!username || !password) {
       alert("Please fill in all fields.");
       return;   
+    }
+
+    if(username.length < 3 || username.length > 16){
+      alert("Invalid Username Length");
+      return;
+    }
+    
+    if(username.length < 3 || username.length > 16){
+      alert("Invalid Password Length");
+      return;
     }
 
     if (password !== confirmPassword) {
