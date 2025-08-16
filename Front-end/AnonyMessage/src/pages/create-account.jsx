@@ -41,7 +41,6 @@ function Create_Account(){
 
       if (res.ok) {
         alert("Account created successfully!");
-        navigate("/");
       } else {
         alert(data.message || "Error creating account.");
       }
@@ -65,7 +64,7 @@ function Create_Account(){
              value={username} onChange={(e) => setUsername(e.target.value)}/>
 
             <input id="password-input" className="CA-input"
-             placeholder="Password" type={showPassword ? "text" : "password"}
+             placeholder="Password" type={showPassword ? "text" : "password"} 
              value={password} onChange={(e) => setPassword(e.target.value)}
              />
 
