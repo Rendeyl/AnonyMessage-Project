@@ -16,7 +16,7 @@ function Create_Account(){
     async function handleCreateAccount() {
     if (!username || !password) {
       alert("Please fill in all fields.");
-      return;
+      return;   
     }
 
     if (password !== confirmPassword) {
@@ -26,13 +26,13 @@ function Create_Account(){
 
     try {
       const res = await fetch(
-        "https://anony-message-backend.vercel.app/api/signup", // change to your actual backend route
+        "https://anony-message-backend.vercel.app/api/signup",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ username, password }),
+          body: JSON.stringify({ username, password }), 
         }
       );
 
@@ -41,6 +41,7 @@ function Create_Account(){
 
       if (res.ok) {
         alert("Account created successfully!");
+        navigate("/");
       } else {
         alert(data.message || "Error creating account.");
       }
