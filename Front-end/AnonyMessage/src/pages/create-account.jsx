@@ -47,8 +47,12 @@ function Create_Account(){
         }
       );
 
-      const data = await res.json();
-      console.log("Signup response:", data);
+      let data = {};
+        try {
+          data = await res.json();
+        } catch {
+          
+        }
 
       if (res.ok) {
         alert("Account created successfully!");
