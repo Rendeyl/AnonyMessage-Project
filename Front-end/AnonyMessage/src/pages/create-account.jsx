@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Create_Account(){
-
+    const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -47,12 +48,8 @@ function Create_Account(){
         }
       );
 
-      let data = {};
-        try {
-          data = await res.json();
-        } catch {
-          
-        }
+      const data = await res.json();
+      console.log("Signup response:", data);
 
       if (res.ok) {
         alert("Account created successfully!");
