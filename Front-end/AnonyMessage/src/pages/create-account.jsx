@@ -41,7 +41,7 @@ function Create_Account(){
 
       if (res.ok) {
         alert("Account created successfully!");
-        navigate("/");
+        //navigate("/");
       } else {
         alert(data.message || "Error creating account.");
       }
