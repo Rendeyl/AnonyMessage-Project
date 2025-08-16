@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index/>}/>
         <Route path="/CreateAccount" element={<Create_Account/>}/>
-        <Route path="/User" element={<UserPage username={"Rhen Dale"}/>}/>
+        <Route path="/User/:username" element={<UserPage />}/>
         <Route path="/Send" element={<Sender/>}/>
         <Route path="/Login" element={<Login/>}/>
       </Routes> 

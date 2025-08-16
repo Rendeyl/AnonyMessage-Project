@@ -1,6 +1,9 @@
+import { useParams } from "react-router-dom";
 import TextCard from "../Components/card";
 
 function UserPage({username}){
+
+    const {username} = useParams();
 
     let tnd = "August  6, 2025 | 10:39PM";
     let message = "I love you";
