@@ -25,7 +25,7 @@ function Create_Account(){
       return;
     }
     
-    if(username.length < 3 || username.length > 16){
+    if(username.length < 2 || username.length > 16){
       alert("Invalid Password Length");
       return;
     }
