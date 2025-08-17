@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login(){
-
+    
+    const navigate = useNavigate();
     const[username, setUsername] = useState("");
     const[password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
@@ -33,7 +35,7 @@ function Login(){
         const data = await res.json();
 
         if(res.ok){
-            window.location.href = data.redirect;
+            navigate(`/User/${username}`);
         }else{
             alert(data.message);
         }
