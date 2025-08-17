@@ -19,7 +19,10 @@ function UserPage(){
         <div id="container2">
             <header id="userHeader">
                 <img id="headerLogo2" src="/icon.png" alt="Logo"/>
+
                 <h1 id="displayUser">{username}</h1>
+
+                <h3 id="userLink">https://anonymessagex.vercel.app/send/{username}</h3>
                 <button id="logoutBTN" onClick={logout}>Log out</button>
             </header>
 

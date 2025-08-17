@@ -232,6 +232,12 @@ body{
 #SendMessageTXT{
   font-family: "Lilita one";
   color: white;
+  margin: 0px;
+}
+
+#SendMessageTXT2{
+  font-family: "Lilita one";
+  color: white;
 }
 
 #MessageInput{

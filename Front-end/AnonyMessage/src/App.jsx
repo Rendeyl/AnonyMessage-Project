@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Index/>}/>
         <Route path="/CreateAccount" element={<Create_Account/>}/>
         <Route path="/User/:username" element={<UserPage />}/>
-        <Route path="/Send" element={<Sender/>}/>
+        <Route path="/Send/:username" element={<Sender/>}/>
         <Route path="/Login" element={<Login/>}/>
       </Routes> 
     </Router>
