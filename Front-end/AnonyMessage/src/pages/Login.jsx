@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Login(){
-    
+
     const navigate = useNavigate();
     const[username, setUsername] = useState("");
     const[password, setPassword] = useState("");
@@ -69,7 +69,7 @@ function Login(){
                 onChange={CheckboxChange}/> Show Password
             </label>
 
-             <button id="CA-btn" onClick={handleLogin}>Create Account</button>
+             <button id="CA-btn" onClick={handleLogin}>Login</button>
         </div>
     );
 }
