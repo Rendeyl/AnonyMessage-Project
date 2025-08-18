@@ -139,6 +139,23 @@ body{
   border-color: #aa4646;
 }
 
+#Login-btn{
+  padding: 2vh;
+  margin-top: 4vh;
+  border: 1px solid #ff6363;
+  border-radius: 30px;
+  background-color: #ff6363;
+  font-family: "Lilita one";
+  font-size: 2vh;
+  color: white;
+  width: 13vh;
+}
+
+#Login-btn:active{
+  background-color: #aa4646;
+  border-color: #aa4646;
+}
+
 /* Userpages */
 
 #headerLogo2{
