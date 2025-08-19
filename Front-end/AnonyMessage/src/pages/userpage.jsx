@@ -13,7 +13,24 @@ function UserPage(){
     let message = "I love you";
 
     async function logout() {
-        navigate("/");
+
+        try{
+            const res = await fetch("https://anony-message-backend.vercel.app/api/logout",
+            {method: "POST",
+            headers: {"Content-Type": "application/json"},
+            credentials: "include"});
+
+            const data = await res.json();
+            if(res.ok){
+                console.log(data.message);
+                navigate("/");
+            }else{
+                console.error("Logout failed:", data.message);
+            }
+
+        }catch (err){
+            console.log(err);
+        }
     }
 
     async function handleCopy() {
