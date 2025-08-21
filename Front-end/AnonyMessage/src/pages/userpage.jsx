@@ -1,16 +1,15 @@
 import { useParams } from "react-router-dom";
 import TextCard from "../Components/card"; 
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function UserPage(){
 
+    const userID = localStorage.getItem("userID");
     const navigate = useNavigate();
     const {username} = useParams();
     const [copied, setCopied] = useState(false);
-
-    let tnd = "August  6, 2025 | 10:39PM";
-    let message = "I love you";
+    const [messages, setMessages] = useState([]);
 
     async function logout() {
         navigate("/")
@@ -26,6 +25,27 @@ function UserPage(){
       console.error("Failed to copy:", err);
     }
   }
+
+  useEffect(() =>{
+    async function loadMessages() {
+        if(!userID) return;
+        try{
+            const res = await fetch(
+                `https://anony-message-backend.vercel.app/api/loadMessages/${userID}`,
+                {credentials: "include"}
+            );
+
+            const data = await res.json();
+            setMessages(data);
+
+        }catch (err){
+            console.log(err);
+        }
+    }
+
+    loadMessages();
+  }, [userID]);
+
 
 
     return(
@@ -47,9 +67,17 @@ function UserPage(){
             </header>
 
             <div id="containerCard">
-                <TextCard timeNdate={tnd} message={message}/>
-                <TextCard timeNdate={tnd} message={message}/>
-                <TextCard timeNdate={tnd} message={message}/>
+                {messages.length > 0 ? (
+          messages.map((msg) => (
+            <TextCard
+              key={msg.id}
+              timeNdate={new Date().toLocaleString()} // you can replace with msg.created_at if you have it in DB
+              message={msg.content}
+            />
+          ))
+        ) : (
+          <p>No messages yet.</p>
+        )}
             </div>
 
         </div>
