@@ -241,8 +241,8 @@ body{
 #noMessages{
   color: white;
   font-family: "Lilita one";
-  align-self: center;
-  justify-self: center;
+  width: 100%;         /* take the full row */
+  text-align: center;
 }
 
 .TCard{

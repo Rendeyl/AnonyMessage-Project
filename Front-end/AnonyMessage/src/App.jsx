@@ -9,7 +9,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return(
     <>
-    
     <Router>
       <Routes>
         <Route path="/" element={<Index/>}/>
@@ -19,7 +18,6 @@ function App() {
         <Route path="/Login" element={<Login/>}/>
       </Routes> 
     </Router>
-    
     </>
   );  
 }

@@ -76,7 +76,7 @@ function UserPage(){
             />
           ))
         ) : (
-          <p id="noMessages">No messages yet. {userID}</p>
+          <h3 id="noMessages">No messages yet.</h3>
         )}
             </div>
 
