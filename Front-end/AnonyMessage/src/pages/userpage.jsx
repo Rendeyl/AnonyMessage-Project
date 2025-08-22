@@ -31,7 +31,7 @@ function UserPage(){
         if(!userID) return;
         try{
             const res = await fetch(
-                `https://anony-message-backend.vercel.app/api/loadMessages/${userID}`,
+                `https://anony-message-backend.vercel.app/api/loadMessages?id=${userID}`,
                 {credentials: "include"}
             );
 
