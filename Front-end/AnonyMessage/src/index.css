@@ -238,6 +238,13 @@ body{
   flex-wrap: wrap;
 }
 
+#noMessages{
+  color: white;
+  font-family: "Lilita one";
+  align-self: center;
+  justify-self: center;
+}
+
 .TCard{
   margin: 4vh;
   border: 1px solid #ffa5a5;
