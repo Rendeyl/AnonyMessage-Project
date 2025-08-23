@@ -282,7 +282,18 @@ body{
   align-items: center;
 }
 
+#loadingPage{
+  font-family: "Lilita one";
+  color: white;
+}
+
 #SendMessageTXT{
+  font-family: "Lilita one";
+  color: white;
+  margin: 0px;
+}
+
+#userFalse{
   font-family: "Lilita one";
   color: white;
   margin: 0px;
