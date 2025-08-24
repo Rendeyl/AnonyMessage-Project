@@ -12,7 +12,7 @@ function Sender(){
         
         async function getUser() {
             try{
-                const res = await fetch("https://anony-message-backend.vercel.app/api/getuser",
+                const res = await fetch("https://anony-message-backend.vercel.app/api/getUser",
                     {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
