@@ -10,6 +10,12 @@ function Sender(){
     const [message, setMessage] = useState("");
 
     async function sendMessage() {
+
+        if(message.length > 200){
+            alert("Max of 200 characters allowed!");
+            return;
+        }
+
         try{
             const res = await fetch("https://anony-message-backend.vercel.app/api/sendMessage",
                 {
@@ -81,7 +87,7 @@ function Sender(){
             <h2 id="SendMessageTXT">Send Your Message!</h2>
             <h3 id="SendMessageTXT2">Sending message to {username}</h3>
             <textarea id="MessageInput" placeholder="Type your message here..." value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-            <button id="SubmitMessageBTN" onClick={sendMessage}>Submit</button>
+            <button id="SubmitMessageBTN" onClick={sendMessage} maxLength={200}>Submit</button>
         </div>
         );
     }
