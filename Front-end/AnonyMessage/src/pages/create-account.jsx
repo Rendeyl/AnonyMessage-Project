@@ -7,6 +7,7 @@ function Create_Account(){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [loading, setLoading] = useState(false);
 
 
     function CheckboxChange() {
@@ -35,6 +36,7 @@ function Create_Account(){
       return;
     }
 
+    setLoading(true);
     try {
       const res = await fetch(
         "https://anony-message-backend.vercel.app/api/signup",
@@ -51,6 +53,7 @@ function Create_Account(){
       console.log("Signup response:", data);
 
       if (res.ok) {
+        setLoading(false);
         alert("Account created successfully!");
         navigate("/");
       } else {
@@ -90,7 +93,7 @@ function Create_Account(){
                 onChange={CheckboxChange}/> Show Password
             </label>
 
-            <button id="CA-btn" onClick={handleCreateAccount}>Create Account</button>
+            <button id="CA-btn" onClick={handleCreateAccount} disabled={loading}>Create Account</button>
             
         </div>
     );

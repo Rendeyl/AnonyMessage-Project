@@ -8,6 +8,7 @@ function Login(){
     const[username, setUsername] = useState("");
     const[password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
+    const [loading, setLoading] = useState(false);
     
         function CheckboxChange() {
         setShowPassword(prev => !prev);
@@ -20,6 +21,7 @@ function Login(){
             return;   
         }
 
+        setLoading(true);
         try{
             const res = await fetch(
             "https://anony-message-backend.vercel.app/api/login",
@@ -36,6 +38,7 @@ function Login(){
         const data = await res.json();
 
         if(res.ok){
+            setLoading(false);
             localStorage.setItem("userID", data.id);
             navigate(`/User/${username}`);
         }else{
@@ -71,7 +74,7 @@ function Login(){
                 onChange={CheckboxChange}/> Show Password
             </label>
 
-             <button id="Login-btn" onClick={handleLogin}>Login</button>
+             <button id="Login-btn" onClick={handleLogin} disabled={loading}>Login</button>
         </div>
     );
 }
