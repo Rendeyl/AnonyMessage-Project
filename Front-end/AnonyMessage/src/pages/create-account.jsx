@@ -20,7 +20,7 @@ function Create_Account(){
       return;   
     }
 
-    if(username.length < 3 || username.length > 16){
+    if(username.length < 2 || username.length > 9){
       alert("Invalid Username Length");
       return;
     }
