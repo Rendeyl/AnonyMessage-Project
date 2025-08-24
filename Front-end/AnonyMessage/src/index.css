@@ -186,6 +186,11 @@ body{
   margin-left: 3vh;
 }
 
+#mobileRes{
+  display: flex;
+  flex-direction: column;
+}
+
 #linkbox{
   display: flex;
   flex-direction: row;
@@ -381,7 +386,7 @@ body{
 #mobileRes{
   display: flex;
   flex-direction: row;
-}
+} 
 
 #logoutBTN{
   max-width: 110px;
