@@ -59,14 +59,15 @@ function UserPage(){
                 <button id="logoutBTN" onClick={logout}>Log out</button>
             </header>
 
-            <div id="containerCard">
-
-                <div id="linkbox">
+            <div id="linkbox">
                     <h5 id="userLink">https://anonymessagex.vercel.app/send/{username}</h5>
                     <button id="copyLink" onClick={handleCopy}>
                     {copied ? "✅ Copied!" : "📄"}
                     </button>
                 </div>
+
+            <div id="containerCard">
+
 
               {messages.length > 0 ? (
               messages.map((msg) => (
