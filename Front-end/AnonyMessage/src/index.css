@@ -188,7 +188,7 @@ body{
 
 #mobileRes{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 #linkbox{
@@ -385,7 +385,7 @@ body{
 
 #mobileRes{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 } 
 
 #logoutBTN{
