@@ -6,17 +6,16 @@ function Sender(){
 
     const {username} = useParams();
     const [userExist, setUserExist] = useState(null);
+    const [sendingID, setSendingID] = useState(-1);
 
     useEffect(() =>{
         
         async function getUser() {
             try{
-                const res = await fetch("https://anony-message-backend.vercel.app/api/getUser",
+                const res = await fetch("https://anony-message-backend.vercel.app/api/getuser",
                     {
                     method: "POST",
-                    headers: {
-                    "Content-Type": "application/json"
-                    },
+                    headers: {"Content-Type": "application/json"},
                     body: JSON.stringify({ username }),
                     }
                 )
@@ -24,6 +23,7 @@ function Sender(){
                 if(res.ok){
                     console.log("True");
                     setUserExist(true);
+                    setSendingID(data.id);
                 }else{
                     setUserExist(false);
                 }
@@ -58,7 +58,7 @@ function Sender(){
             <img id="headerLogo" src="/icon.png" alt="Logo"/>
 
             <h2 id="SendMessageTXT">Send Your Message!</h2>
-            <h3 id="SendMessageTXT2">Sending message to {username}</h3>
+            <h3 id="SendMessageTXT2">Sending message to {username} with id of {sendingID}</h3>
             <textarea id="MessageInput" placeholder="Type your message here..."></textarea>
             <button id="SubmitMessageBTN">Submit</button>
         </div>
