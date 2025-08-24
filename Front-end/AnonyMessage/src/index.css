@@ -186,17 +186,11 @@ body{
   margin-left: 3vh;
 }
 
-#mobileRes{
-  display: flex;
-  flex-direction: row;
-}
-
 #linkbox{
   display: flex;
   flex-direction: row;
   justify-self: center;
   align-self: center;
-  margin-left: 3vh;
 }
 
 #userLink{
@@ -387,22 +381,6 @@ body{
   display: flex;
   flex-direction: column;
 } 
-
-#linkbox{
-  display: flex;
-  flex-direction: row;
-  justify-self: center;
-  align-self: center;
-  margin-left: 3vh;
-}
-
-#logoutBTN{
-  max-width: 100px;
-  width: 10vh;
-  font-size: 1vh;
-}
-
-
 
 #containerCard{
   flex-direction: column;

@@ -54,26 +54,23 @@ function UserPage(){
             <header id="userHeader">
                 <img id="headerLogo2" src="/icon.png" alt="Logo"/>
             
-                <div id="mobileRes">
                   <h1 id="displayUser">{username}</h1>
-
-                  <div id="linkbox">
-                    <h5 id="userLink">https://anonymessagex.vercel.app/send/{username}</h5>
-                    <button id="copyLink" onClick={handleCopy}>
-                    {copied ? "✅ Copied!" : "📄"}
-                    </button>
-                  </div>
-
-                </div>
-
 
                 <button id="logoutBTN" onClick={logout}>Log out</button>
             </header>
 
             <div id="containerCard">
-                {messages.length > 0 ? (
-          messages.map((msg) => (
-            <TextCard
+
+                <div id="linkbox">
+                    <h5 id="userLink">https://anonymessagex.vercel.app/send/{username}</h5>
+                    <button id="copyLink" onClick={handleCopy}>
+                    {copied ? "✅ Copied!" : "📄"}
+                    </button>
+                </div>
+
+              {messages.length > 0 ? (
+              messages.map((msg) => (
+              <TextCard
               key={msg.id}
               message={msg.content}
             />
