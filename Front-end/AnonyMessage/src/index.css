@@ -241,7 +241,7 @@ body{
 #noMessages{
   color: white;
   font-family: "Lilita one";
-  width: 100%;         /* take the full row */
+  width: 100%;
   text-align: center;
 }
 
@@ -266,7 +266,7 @@ body{
   background-color: white;
   border-radius: 10px;
   max-height: 35vh;
-  height: 25vh;
+  height: 32vh;
   margin: 1vh;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2vh;
@@ -389,7 +389,7 @@ width: 30vh;
 }
 .WhiteCard{
   max-height: 30vh;
-  height: 65%;
+  height: 100%;
   font-size: 2vh;
 }
 

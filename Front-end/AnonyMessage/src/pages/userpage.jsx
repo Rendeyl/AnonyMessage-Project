@@ -71,7 +71,6 @@ function UserPage(){
           messages.map((msg) => (
             <TextCard
               key={msg.id}
-              timeNdate={new Date().toLocaleString()}
               message={msg.content}
             />
           ))

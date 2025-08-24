@@ -3,6 +3,7 @@ import Create_Account from "./pages/create-account";
 import UserPage from "./pages/userpage";
 import Sender from "./pages/SendMessage";
 import Login from "./pages/Login";
+import TextCard from "./Components/card";
 import {} from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -14,10 +15,11 @@ function App() {
         <Route path="/" element={<Index/>}/>
         <Route path="/CreateAccount" element={<Create_Account/>}/>
         <Route path="/User/:username" element={<UserPage />}/>
-        <Route path="/Send/:username" element={<Sender/>}/>
+        <Route path="/Send/:username" element={<Sender />}/>
         <Route path="/Login" element={<Login/>}/>
       </Routes> 
-    </Router>
+    </Router> 
+    {/*<TextCard />*/}
     </>
   );  
 }
