@@ -84,7 +84,7 @@ function Sender(){
             <div id="container3">
             <Link to={"/"}>
             <img id="headerLogo" src="/icon.png" alt="Logo"/>
-            <Link/>
+            </Link>
 
             <h2 id="SendMessageTXT">Send Your Message!</h2>
             <h3 id="SendMessageTXT2">Sending message to {username}</h3>
