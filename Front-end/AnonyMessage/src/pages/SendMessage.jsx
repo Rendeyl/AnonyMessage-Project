@@ -80,7 +80,7 @@ function Sender(){
 
             <h2 id="SendMessageTXT">Send Your Message!</h2>
             <h3 id="SendMessageTXT2">Sending message to {username}</h3>
-            <textarea id="MessageInput" placeholder="Type your message here..."></textarea>
+            <textarea id="MessageInput" placeholder="Type your message here..." value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
             <button id="SubmitMessageBTN" onClick={sendMessage}>Submit</button>
         </div>
         );
