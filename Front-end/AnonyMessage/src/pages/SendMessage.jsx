@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 
 function Sender(){
 
@@ -82,7 +82,9 @@ function Sender(){
     if(userExist === true){
         return(
             <div id="container3">
+            <Link to={"/"}>
             <img id="headerLogo" src="/icon.png" alt="Logo"/>
+            <Link/>
 
             <h2 id="SendMessageTXT">Send Your Message!</h2>
             <h3 id="SendMessageTXT2">Sending message to {username}</h3>
