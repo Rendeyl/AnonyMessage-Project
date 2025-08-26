@@ -42,6 +42,7 @@ function Login(){
             localStorage.setItem("userID", data.id);
             navigate(`/User/${username}`);
         }else{
+            setLoading(false);
             alert(data.message);
         }
 

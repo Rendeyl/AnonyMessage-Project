@@ -34,10 +34,12 @@ function Sender(){
             if (res.ok){
                 alert("Message Sent!");
                 setMessage("");
+                setLoading(false);
             }else{
                 alert("Something Went Wrong.");
             }
         }catch (err){
+            setLoading(false);
             console.log("Error: " + err);
         }finally {
             setLoading(false);

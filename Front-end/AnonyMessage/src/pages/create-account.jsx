@@ -57,6 +57,7 @@ function Create_Account(){
         alert("Account created successfully!");
         navigate("/");
       } else {
+        setLoading(false);
         alert(data.message || "Error creating account.");
       }
     } catch (err) {
